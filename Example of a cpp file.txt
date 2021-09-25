@@ -1,0 +1,54 @@
+#include<iostream>
+using namespace std;
+class add
+{
+    int a;
+    int b;
+    int sum;
+    public:
+    add()
+    {
+        a=0; 
+        b=0;
+        sum=0;
+    }
+    add(add &obj){
+        a=obj.a;
+        b=obj.b;
+
+
+    }
+    add(int x,int y)
+    {
+        a=x;
+        b=y;
+        sum=0;
+    }
+    int addno()
+    {
+        sum=a+b;
+        return sum;
+    }
+    void disp()
+    {
+        cout<<"No.s are"<<a<<" and "<<b<<" and sum is "<<sum<<endl;
+    }
+
+
+};
+int main(){
+    add c1,c2,c3;
+    c1=add();
+    c1.addno();
+    c1.disp();
+    c2=add(2,3);//constructor me aise hi bhejenge value.
+    c2.addno();
+    c2.disp();
+    c3=add(c2);
+    c3.addno();
+    c3.disp();
+
+
+return 0;
+}
+
